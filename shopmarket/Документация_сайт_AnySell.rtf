@@ -1,0 +1,97 @@
+{\rtf1\ansi\ansicpg1251\deff0
+{\fonttbl{\f0 Calibri;}{\f1 Consolas;}}
+{\colortbl;\red30\green41\blue59;\red0\green120\blue215;\red220\green38\blue38;}
+\fs22
+
+\b Документация: AnySell – фронт-енд на емагазин\b0\par
+Версия: 0.3.0 \tab Дата: 10.09.2025\par
+Автор: placeholderimperia\par
+\par
+
+\b 1. Обзор\b0\par
+Лек, статичен фронт-енд, изграден с {\b HTML/CSS/JS} без фреймуърк. Оформление: ляв \i сайдбар с категории\i0 и \i дясна основна колона\i0 (герой банер + продукти). Кодът е написан с фокус върху достъпност, производителност и лесно редактиране.\par
+\par
+
+\b 2. Структура на проекта\b0\par
+\f1
+./index.html   \tab – основен HTML (header, sidebar, hero, products)\par
+./styles.css   \tab – стилове (layout, тъмна тема, компоненти)\par
+./header.js    \tab – поведение (менюта, карусел, рендер на оферти)\par
+./assets/      \tab – изображения (hero1.jpg, hero2.jpg, hero3.jpg)\par
+./assets/pics/ \tab – продуктови снимки (iphone-14-pro-deeppurple.jpg)\par
+\f0\par
+
+\b 3. Основни компоненти\b0\par
+{\b Header}\par
+– Горна лента: лого, търсене, промо „Super Sale 20%“, бързи икони, език/валута (dropdown).\par
+– Долна лента: бутон „Categories“ + основна навигация.\par
+– Мобилно меню: offcanvas панел (#mobileNav), затваряне с Esc/извън кликове.\par
+\par
+{\b Categories (aside.cat-panel)}\par
+– Desktop: винаги отворен, sticky card.\par
+– Mobile: offcanvas с overlay.\par
+\par
+{\b Hero слайдер (#heroSlider)}\par
+– 3 слайда: изображение + caption. Бутони Prev/Next и точки.\par
+– Автовъртене ~5 s; пауза при hover/visibility change; touch swipe.\par
+\par
+{\b Products grid (#productsGrid)}\par
+– Рендерира се от JS масив \f1 products \f0 в \f1 header.js\f0.\par
+– Responsive: 3 колони (desktop) / 2 (tablet) / 1 (mobile).\par
+– Карта: badges (отстъп/наличност), снимка, перки (доставка, 0% лихва), цена с \f1 <sup>\f0.\par
+\par
+
+\b 4. Данни и рендериране\b0\par
+– Масив \f1 products\f0 в \f1 header.js\f0 – един обект = една карта.\par
+Пример:\par
+\f1
+{\pard\li360
+{\{ id: 'iphone14pro-128-dp', title: 'Apple iPhone 14 Pro',\par
+  variant: 'Deep Purple, 128 GB, Като нов',\par
+  image: 'assets/pics/iphone-14-pro-deeppurple.jpg',\par
+  delivery: '1–2 работни дни', interestFree: true,\par
+  oldPriceLv: '1229.99', priceLv: '1179.99', priceEur: '603.32',\par
+  discount: '- 50 лв', stock: 'Ограничена наличност', chip: 'Genius оферти -60 лв' \} }\par
+}\par
+\f0
+– Добавяне/премахване на карта = добавяне/изтриване на обект в масива.\par
+– Препоръчителни пътища за снимки: \i assets/pics/\i0.\par
+\par
+
+\b 5. Стил и достъпност\b0\par
+– Тъмна тема; плавни hoverсъстояния; радиуси 14–18 px.\par
+– Семантика: \f1<header>\f0, \f1<aside>\f0, \f1<main>\f0, \f1<nav>\f0, \f1<section>\f0.\par
+– Слайдерът има \f1 aria-roledescription="carousel"\f0; точки като табове.\par
+– Esc затваря мобилни панели. Altтекст на всички изображения.\par
+\par
+
+\b 6. Производителност\b0\par
+– Използвайте \f1 loading="lazy" decoding="async"\f0 за статични изображения.\par
+– Оптимизирайте файловете (WebP, компресия, правилни размери).\par
+– По желание: CDN (Cloudinary/ImageKit) за автоматично преоразмеряване.\par
+\par
+
+\b 7. Деплой и GitHub\b0\par
+– Препоръка: GitHub Pages (\i Settings  Pages\i0, source: main / root).\par
+– Работен поток:\par
+\f1
+git add -A\par
+git commit -m "feat: update products / hero copy"\par
+git push\par
+\f0\par
+
+\b 8. История на промените (накратко)\b0\par
+– 0.3.0: Products grid от JS масив; чистене на статична карта; снимка на първия продукт  assets/pics/iphone-14-pro-deeppurple.jpg.\par
+– 0.2.0: Hero слайдер (autoplay, dots, swipe); sticky categories; mobile offcanvas.\par
+– 0.1.0: Начален scaffold (header, навигация, тема).\par
+\par
+
+\b 9. План/идеи (roadmap)\b0\par
+– Зареждане на \i products\i0 от \i assets/data/products.json\i0 + филтри (Fuse.js).\par
+– Замяна на custom слайдера със Swiper.js.\par
+– JSONLD Product schema за SEO; GitHub Actions за автоматичен деплой.\par
+\par
+
+\cf2 Забележка:\cf0\par
+Ако желаете документът в \b PDF\b0 или \b DOCX\b0 формат, мога да го изнеса в тези формати. Текущият файл е \b RTF\b0 (напълно съвместим с Microsoft Word).\par
+}
