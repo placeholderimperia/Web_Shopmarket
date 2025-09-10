@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AnySell — Header Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-top">
+      <button class="icon-btn header-burger" id="burgerBtn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileNav">
+        <svg viewBox="0 0 24 24" class="icon"><path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+
+      <a href="#" class="logo">
+        <span class="logo-badge">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M6 7h12l-1 11H7L6 7Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M9 10v-1a3 3 0 0 1 6 0v1" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>
+        </span>
+        <span class="logo-text">AnySell</span>
+      </a>
+
+      <form class="search" role="search" aria-label="Site">
+        <svg viewBox="0 0 24 24" class="icon search-icon"><path d="M11 19a8 8 0 1 1 6.32-3.1L22 20.6l-1.4 1.4-4.7-4.7A8 8 0 0 1 11 19Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+        <input type="search" placeholder="Search the products" />
+      </form>
+
+      <div class="header-actions">
+        <div class="promo-pill" aria-label="Promotion">
+          <svg viewBox="0 0 24 24" class="icon"><path d="M19 5 5 19M7 7a2 2 0 1 0 0 .01M17 17a2 2 0 1 0 0 .01" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+          <span><span class="muted">Only this month</span> <strong>Super Sale 20%</strong></span>
+        </div>
+
+        <nav class="quick-icons" aria-label="User shortcuts">
+          <button class="icon-btn" aria-label="Wishlist">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M12 21s-7-4.35-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.65-7 10-7 10Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="icon-btn" aria-label="Account">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-5 0-9 2.5-9 5v1h18v-1c0-2.5-4-5-9-5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="icon-btn badge" aria-label="Cart" data-badge="2">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M6 6h15l-1.5 9H8.5L7 4H3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9.5" cy="20" r="1.5"/><circle cx="17.5" cy="20" r="1.5"/></svg>
+          </button>
+        </nav>
+
+        <div class="locale">
+          <button class="dropdown-btn" data-dropdown="langDd" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 24 24" class="icon"><path d="M12 3a9 9 0 1 0 0 18A9 9 0 0 0 12 3Zm0 0s-4 3.5-4 9 4 9 4 9 4-3.5 4-9-4-9-4-9Zm-9 9h18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            Eng
+            <svg viewBox="0 0 24 24" class="icon chevron"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          </button>
+          <div class="dropdown" id="langDd" role="menu">
+            <button role="menuitem">Eng</button>
+            <button role="menuitem">Bg</button>
+            <button role="menuitem">De</button>
+          </div>
+
+          <button class="dropdown-btn" data-dropdown="currDd" aria-haspopup="true" aria-expanded="false">
+            USD ($)
+            <svg viewBox="0 0 24 24" class="icon chevron"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          </button>
+          <div class="dropdown" id="currDd" role="menu">
+            <button role="menuitem">USD ($)</button>
+            <button role="menuitem">EUR (€)</button>
+            <button role="menuitem">GBP (£)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container">
+        <div class="cat-wrapper">
+          <button class="cat-btn">
+            <span class="cat-icon">
+              <svg viewBox="0 0 24 24" class="icon"><path d="M9 6h11M4 12h16M4 18h11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </span>
+            Categories
+            <svg viewBox="0 0 24 24" class="icon chevron"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+
+        <nav class="main-nav" aria-label="Primary">
+          <a href="#" class="nav-link"><svg viewBox="0 0 24 24" class="icon"><path d="M3 12l9-9 9 9v8a2 2 0 0 1-2 2h-4v-6H9v6H5a2 2 0 0 1-2-2Z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg> Home</a>
+          <a href="#" class="nav-link"><svg viewBox="0 0 24 24" class="icon"><path d="M12 17.27 18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2 9.19 8.62 2 9.24l5.46 4.73L5.82 21z" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linejoin="round"/></svg> Best Sellers</a>
+          <button class="nav-link dropdown-btn" data-dropdown="shopDd">Shop <svg viewBox="0 0 24 24" class="icon chevron"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg></button>
+          <button class="nav-link dropdown-btn" data-dropdown="blogDd">Blog <svg viewBox="0 0 24 24" class="icon chevron"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg></button>
+          <button class="nav-link dropdown-btn" data-dropdown="pagesDd">Pages <svg viewBox="0 0 24 24" class="icon chevron"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg></button>
+        </nav>
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobileNav" hidden>
+      <div class="container">
+        <form class="search mobile" role="search">
+          <svg viewBox="0 0 24 24" class="icon search-icon"><path d="M11 19a8 8 0 1 1 6.32-3.1L22 20.6l-1.4 1.4-4.7-4.7A8 8 0 0 1 11 19Z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+          <input type="search" placeholder="Search the products" />
+        </form>
+        <nav class="mobile-links" aria-label="Mobile">
+          <a href="#">Home</a>
+          <a href="#">Best Sellers</a>
+          <a href="#">Shop</a>
+          <a href="#">Blog</a>
+          <a href="#">Pages</a>
+        </nav>
+        <div class="mobile-locale">
+          <button class="dropdown-btn" data-dropdown="mLangDd">Eng <svg viewBox="0 0 24 24" class="icon chevron"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+          <div class="dropdown" id="mLangDd">
+            <button>Eng</button><button>Bg</button><button>De</button>
+          </div>
+          <button class="dropdown-btn" data-dropdown="mCurrDd">USD ($) <svg viewBox="0 0 24 24" class="icon chevron"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none"/></svg></button>
+          <div class="dropdown" id="mCurrDd">
+            <button>USD ($)</button><button>EUR (€)</button><button>GBP (£)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ЛЕЙАУТ: ляв сайдбар (категории) + съдържание -->
+  <div class="layout">
+    <aside class="cat-panel" id="catPanel" aria-label="Categories">
+      <div class="cat-panel-inner">
+        <h3>Categories</h3>
+        <nav class="cat-list">
+          <a href="#"><span class="cat-ico">💻</span> Computers & Accessories</a>
+          <a href="#"><span class="cat-ico">📱</span> Smartphones & Tablets</a>
+          <a href="#"><span class="cat-ico">📺</span> TV, Video & Audio</a>
+          <a href="#"><span class="cat-ico">🔊</span> Speakers & Home Music</a>
+          <a href="#"><span class="cat-ico">📷</span> Cameras, Photo & Video</a>
+          <a href="#"><span class="cat-ico">🖨️</span> Printers & Ink</a>
+          <a href="#"><span class="cat-ico">⚡</span> Charging Stations</a>
+          <a href="#"><span class="cat-ico">🎧</span> Headphones</a>
+          <a href="#"><span class="cat-ico">⌚</span> Wearables</a>
+          <a href="#"><span class="cat-ico">🔋</span> Powerbanks</a>
+          <a href="#"><span class="cat-ico">💽</span> HDD/SDD Data Storage</a>
+          <a href="#"><span class="cat-ico">🎮</span> Video Games</a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main (дясна колона) -->
+    <main class="page-main">
+      <!-- HERO банер със слушалките -->
+      <section class="hero">
+        <div class="hero-slider" id="heroSlider" aria-roledescription="carousel">
+          <div class="slides" role="group">
+            <article class="slide is-active" aria-label="Slide 1">
+              <!-- тук е твоята снимка -->
+              <img src="assets/pics/headphones.jpg" alt="Over-ear headphones" />
+              <div class="slide-caption">
+                <p class="muted">Fresh arrivals</p>
+                <h1>Pro Headphones 2025</h1>
+                <a class="cta" href="#">Explore →</a>
+              </div>
+            </article>
+
+            <article class="slide" aria-label="Slide 2">
+              <img src="assets/pics/headphones.jpg" alt="Noise-cancelling headphones" />
+              <div class="slide-caption">
+                <p class="muted">Deal of the week</p>
+                <h1>Powerful iPad Pro M1</h1>
+                <a class="cta" href="#">Shop now →</a>
+              </div>
+            </article>
+
+            <article class="slide" aria-label="Slide 3">
+              <img src="assets/pics/headphones.jpg" alt="Smartwatch closeup" />
+              <div class="slide-caption">
+                <p class="muted">Limited time</p>
+                <h1>Smartwatch Ultra</h1>
+                <a class="cta" href="#">Buy now →</a>
+              </div>
+            </article>
+          </div>
+
+          <button class="hero-nav prev" aria-label="Previous slide">‹</button>
+          <button class="hero-nav next" aria-label="Next slide">›</button>
+
+          <div class="hero-dots" role="tablist" aria-label="Carousel Pagination">
+            <button class="dot is-active" role="tab" aria-selected="true" aria-controls="slide-1"></button>
+            <button class="dot" role="tab" aria-selected="false" aria-controls="slide-2"></button>
+            <button class="dot" role="tab" aria-selected="false" aria-controls="slide-3"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- КАРТА ПОД БАНЕРА, вляво до категориите -->
+      <section class="products-grid" id="productsGrid" aria-label="Featured products"></section>
+
+    </main>
+  </div>
+
+  <script src="header.js" defer></script>
+</body>
+</html>
